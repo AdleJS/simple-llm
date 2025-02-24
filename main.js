@@ -2,7 +2,7 @@ import { ChatOllama } from "@langchain/ollama";
 import { ChatPromptTemplate } from "@langchain/core/prompts";
 
 const llm = new ChatOllama({
-    model: "deepseek-r1:1.5b",
+    model: "llama3.2:3b",
 });
 
 const prompt = ChatPromptTemplate.fromMessages([
@@ -11,7 +11,7 @@ const prompt = ChatPromptTemplate.fromMessages([
 ])
 
 const promptValue = await prompt.invoke({
-    language: "Kazakh",
+    language: "Russian",
     text: "I love programming",
 });
 
